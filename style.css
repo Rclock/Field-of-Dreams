@@ -1,0 +1,96 @@
+body{
+
+        background-color: maroon;
+}
+#content {overflow: auto;}
+
+#nav, #feature {
+        margin: 1.2%;
+
+}
+.column1, .column2, .column3
+{
+        background-color: maroon;
+width: 31.3%;
+float: left;
+margin: 1%;
+}
+
+.column3 {margin-right: 0%;}
+
+#nav {
+        background-color: maroon;
+        padding: 0.5em;
+}
+#.article
+{
+        height: 300px;
+        margin-bottom: 1em;
+        background-color: maroon;
+}
+#map{
+        margin-right: 1%;
+        margin-left: 1%;
+}
+img{
+        width: 425px;
+        height: 500px;
+}
+h1{
+        color: gold;
+}
+
+h2{
+        color: gold;
+
+        font-size: large;
+        margin-left: 42.6%;
+
+}
+h3
+{
+color:solid black;
+
+}
+h4{
+        color: gold;
+}
+h5{
+        color: gold;
+        font-size:small;
+
+}
+table{
+        border: gold;
+}
+
+button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.2s;
+}
+
+button:hover{
+                background-color: gold;
+                color: black;
+}
+
+#map 
+          {
+                border: solid black;
+                background-color: #efefef;
+        height: 420px; 
+                width: 1230px;
+
+                /*position: absolute;*/
+                /*clip: rect(0px, 1000px, 600px, 265px);*/
+       }
+
+
+
