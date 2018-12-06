@@ -1,0 +1,5 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+jQuery.getJSON("latlong.json", function( json ) {
+    console.log("JSON data received, data is: " + json.lat);
+});

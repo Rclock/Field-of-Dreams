@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+
+  </head>
+
+  <body>
+    <h1>JSON tester</h1>
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="map.js"></script>
+<!--
+<script>
+ /* var json = require('latlong.json')
+  
+  $.getJSON("latlong.json", function(json) {
+      document.write(json); // this will show the info it in firebug console
+});*/
+
+  //document.write(lat);
+  //document.write(long);
+
+</script>
+-->
+  </body>
+
+  </html>

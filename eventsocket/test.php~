@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+
+
+<html>
+
+   
+<?php
+
+    $somevar = $_GET["uid"];
+
+?>
+
+</html>

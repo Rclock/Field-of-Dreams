@@ -1,0 +1,6 @@
+doctype html
+html(lang="en")
+  head
+    title Automatic Events Websocket Demo
+body
+p hello
