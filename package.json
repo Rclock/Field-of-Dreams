@@ -1,0 +1,19 @@
+{
+  "name": "field-of-dreams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rclock/Field-of-Dreams.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rclock/Field-of-Dreams/issues"
+  },
+  "homepage": "https://github.com/Rclock/Field-of-Dreams#readme"
+}
