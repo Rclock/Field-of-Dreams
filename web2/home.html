@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+<meta charset="utf-8">
+
+<script type="text/JavaScript">
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+      </script>
+<style>
+  #map {
+        border: solid black;                                                              
+                background-color: #efefef;                                                       
+        height: 420px;                                                                           
+                width: 1230px;  
+      }
+</style>
+
+
+<!--We may not need this here anymore -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- runs app.js, which reads from the file and outputs to this html. -->
+<script src="app.js"></script>
+
+
+  </head>
+  <!-- defined above, this function will refresh page every 8 seconds. -->
+<!--  <body onload="JavaScript:AutoRefresh(8000);">
+  -->
+  <body>
+
+
+
+<div>
+    <div id="map">                                                                            
+<!-- map implementation starts here-->                                                            
+        <script>                                                                                  
+// function to Initialize and add the map                                                         
+function initMap()                                                                                
+{                                                                                                 
+  // The location of Salisbury                                                                    
+  var salisbury = {lat: 34, lng: 4};                                                              
+    // The map, centered at Salisbury                                                             
+  var map = new google.maps.Map(                                                                  
+      document.getElementById('map'), {zoom: 10, center: salisbury});                             
+  // The marker, positioned at Salisbury                                                         
+  var marker = new google.maps.Marker({position: salisbury, map: map});                          
+}                                                                                                
+        </script>                                                                                
+        <!-- the script below brings in the google maps image-->                                 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjac7T3jC7xZNYX6r9UYjpwrjrzWjjSJY&callback=initMap" async defer></script>
+</div>  
+</div>
+
+
+
+
+    
+   
+<!--<script>//the below is basically the content of app.js 
+ var json = require('latlong.json')
+  
+  $.getJSON("latlong.json", function(json) {
+      document.write(json); // this will show the info it in firebug console
+});</script>-->
+ </body>
+  </html>
