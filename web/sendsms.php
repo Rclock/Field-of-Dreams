@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+
 <?php
 // Require the bundled autoload file - the path may need to change
 // based on where you downloaded and unzipped the SDK
