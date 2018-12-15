@@ -7,7 +7,7 @@
 <style>
 body { margin:0; padding:0; }
 
-#map { position:absolute; height:70%; width:90% }
+#map { position:absolute; height:85%; width:95% }
 #container { height:100px; width:300px; }
 </style>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
@@ -28,9 +28,9 @@ body { margin:0; padding:0; }
 <script>
   $.ajaxSetup({cache:false});//the key to reading updated data
   jQuery.getJSON("latlong.json", function(js){                                                                          
-    console.log("JSON data received, data is: " + js);                                                              
-    console.log("Lat received: " + js.lat);//access lat                                                              
-    console.log("Long received: " + js.lon);//access lng                                                             
+    console.log("JSON data received");                                                              
+    console.log("Latitude received: " + js.lat);//access lat                                                          
+    console.log("Longitude received: " + js.lon);//access lng
     lng = js.lon;
     lat = js.lat;
       
@@ -39,7 +39,7 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
     center: [lng, lat], // starting position [lng, lat]
-    zoom: 14 // starting zoom
+    zoom: 2 // starting zoom
 });
 
 
@@ -71,7 +71,7 @@ map.on("load", function () {
   </head>
 
 
- <body onload="JavaScript:AutoRefresh(10000);">
+ <body onload="JavaScript:AutoRefresh(14000);">
 
 
 <!--  <body>  

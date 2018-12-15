@@ -1,5 +1,5 @@
 //set up websocket connection
-const jsonfile = require('jsonfile')//need to do this for json file operations 
+const jsonfile = require('jsonfile')//need to do 
 var io = require('socket.io-client')//socketio library
 const file = 'latlong.json'//name of file we create and write to 
  
@@ -7,6 +7,7 @@ var socket = io('https://stream.automatic.com?token=6d7513e198cade8ff0b1:9404dcc
 
 // Listen for `location:updated` event
 socket.on('location:updated', function(data) {
+   // console.log('Trip Finished', data);
    // console.log(data.location.lat);
    // console.log(data.location.lon);
     console.log(data.location);//shows entire object in console
