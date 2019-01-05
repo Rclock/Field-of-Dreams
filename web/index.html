@@ -1,80 +1,91 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<style>
-body { margin:0; padding:0; }
 
-#map { position:absolute; height:85%; width:95% }
-#container { height:100px; width:300px; }
-</style>
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+<head>
 
-    <title>map</title>
- 
+<title>425 Project</title>
+<link rel="stylesheet" href="style.css"/>
 
-<script type="text/JavaScript">
-            function AutoRefresh( t ) {
-               setTimeout("location.reload(true);", t);
-            }
-      </script>
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="app.js"></script>
-<div id='map'></div>
-<script>
-  $.ajaxSetup({cache:false});//the key to reading updated data
-  jQuery.getJSON("latlong.json", function(js){                                                                          
-    console.log("JSON data received");                                                              
-    console.log("Latitude received: " + js.lat);//access lat                                                          
-    console.log("Longitude received: " + js.lon);//access lng
-    lng = js.lon;
-    lat = js.lat;
-      
-    mapboxgl.accessToken = 'pk.eyJ1IjoicmNsb2NrZXIxMiIsImEiOiJjanBvdXB0N3IwN2QwNDJueGY2NTNrajc3In0.xws0wrpk49MH3P7izqtDpg'; 
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-    center: [lng, lat], // starting position [lng, lat]
-    zoom: 2 // starting zoom
-});
+</head>
 
 
-map.on("load", function () {
-  /* Image: An image is loaded and added to the map. */
-  map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
-      if (error) throw error;
-      map.addImage("custom-marker", image);
-      /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
-      map.addLayer({
-        id: "markers",
-        type: "symbol",
-        /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
-        source: {
-          type: "geojson",
-          data: {
-            type: "FeatureCollection",
-            features:[{"type":"Feature","geometry":{"type":"Point","coordinates":[lng, lat]}}]}
-        },
-        layout: {
-          "icon-image": "custom-marker",
-        }
-      });
-    });
-});
-  });
-  
-  </script>
-  </head>
+<body>
+<div id="header">
+<h1> COSC425 Project </h1>
+<div id="nav">
+<a href="home.html"><button class="button">Home</button></a>
+<a href="about.html"><button type="button">About</button></a>
+<a href="contact.html"><button type="button">Contact</button></a>
+<a href="signup.html"><button type="button">SMS Signup</button></a>
+<a href="map.html"><button type ="button">Van Location</button></a>
+<a href="sendsms.html"><button type="button">Login</button></a>
 
 
- <body onload="JavaScript:AutoRefresh(14000);">
+</div>
+</div>
+
+<div id="content">
+<h2>Demo map/gps tracking</h2>
+        <div id="map">
+<!-- map implementation starts here-->
+        <script>
+// function to Initialize and add the map
+function initMap()
+{
+  // The location of Salisbury
+  var salisbury = {lat: 34, lng: 4}; 
+    // The map, centered at Salisbury
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: salisbury});
+  // The marker, positioned at Salisbury
+  var marker = new google.maps.Marker({position: salisbury, map: map});
+}
+        </script>	
+        <!-- the script below brings in the google maps image-->
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCiTM--BfznhwUxvosLnF99JzDElv0yew&callback=initMap">
+    </script>
+</div>
 
 
-<!--  <body>  
--->
+</div>
+
+<div class="article column1">
+<script src="script07.js" language="javascript" type="text/javascript">
+</script
+
+<div align="center">
+<img src="SU.png" width="425" height="500" id="adBanner" alt="Ad Banner" />
+</div>
+
+
+
+
+</div>
+
+<div class="article column2">
+
+
+
+</div>
+
+<div class="article column3">
+<img src="warriors.JPG">
+</div>
+</div>
+    <!--The div element for the map -->
+    
+
+
+
+
+
+
+<!--<img src="SU.jpg" class="w3-hover-opacity" alt="SU website">-->
+
 </body>
-  </html>
+
+
+
+
+</html>
