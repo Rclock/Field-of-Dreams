@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Send a Message</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 160px;
+        left: 30%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+    </style>
+  <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+	<div id="header">
+		<h1> Send Message Page </h1>
+		<div id="nav">
+			<a href="admin.html"><button type="button">Home</button></a>
+			<a href="sendsms_geo.html"><button type="button">Send SMS</button></a>
+			<a href="dataForm.html"><button type="button">Data Form</button></a>
+			<a href="logout.php"><button type="button">Logout</button></a>
+		</div>
+	</div>
+</body>
+  <body>
+	<div id="floating-panel">
+    <!--<div id="floating-panel"> -->
+	<form action="sendsms.php" method="post"> 
+	  <input id="message" type="textbox" align="right" placeholder="Enter Message Here"><br>
+      <input id="address" type="textbox" align="right" placeholder="Salisbury, MD"><br>
+      <input id="submit" type="button" align="right" value="Find the Coordinates">
+	 </form>
+	 </div>
+   <!-- </div> -->
+    <div id="map" style="width:50%;height:400px;"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: 38.3607, lng: -75.5994}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+        });
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+		var msg = document.getElementById('message').value;
+		var loc=[];
+
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+			loc[0]=results[0].geometry.location.lat();
+			loc[1]=results[0].geometry.location.lng();
+
+			window.location.href="sendsms.php?lat=" + loc[0] + "&lon=" +loc[1] + "&msg=" +msg + "&addr=" + address;
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDquHM9hQ7iiykt8jsgnHUvIKej4dGO3Qg&callback=initMap">
+    </script> 
+  </body>
+</html>
