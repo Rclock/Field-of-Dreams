@@ -8,18 +8,17 @@
 <style>
 body { margin:0; padding:0; }
 
-#map { position:absolute; height:85%; width:95% }
+#map { position:absolute; height:85%; width:95%; border:solid black; }
 #container { height:100px; width:300px; }
 </style>
 <div id="nav">
 <a href="index.html"><button class="button">Back to Home</button></a>
-
+<h4>
+<br>Below is the current location of the needle exchange van. It's location will be updated over a roughly 10 second interval. </br>
+</h4>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
-
-    <title>map</title>
  
-
 <script type="text/JavaScript">
             function AutoRefresh( t ) {
                setTimeout("location.reload(true);", t);
@@ -43,7 +42,7 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
     center: [lng, lat], // starting position [lng, lat]
-    zoom: 2 // starting zoom
+    zoom: 9 // starting zoom
 });
 
 
