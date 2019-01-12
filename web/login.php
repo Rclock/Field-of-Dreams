@@ -3,8 +3,7 @@
 
 <a href="index.html"><button type="button">Back to Home</button></a>
 
-<h1>Login</h1>
-
+<br></br>
 <title>Admin Login</title>
 <link rel="stylesheet" href="style.css"/>
 
@@ -20,11 +19,11 @@ function invalidPass(){
         function doSubmitOne(e){                                                                                                             
                 setTimeout(function(){location.href="admin.html"} , 30);                                                                      
         }
-	/*function doSubmitTwo(e){                                                                                                            
+	function doSubmitTwo(e){                                                                                                            
                                                                                                                                             
-                setTimeout(function(){location.href="login.php"} , 30);                                                                    \
+                setTimeout(function(){location.href="login.php"} , 30);                                                                    
                                                                                                                                             
-        }*/
+        }
 </script>
 
 <?php                                                                                                                                       
@@ -56,9 +55,9 @@ else if (($user=="admin") && ($pass=="fod"))
       else
       {
       echo "Wrong password.";
-                  /*      echo '<script type="text/javascript">',                                                                              
+      echo '<script type="text/javascript">',                                                                              
      'doSubmitTwo(event);',                                                                                                                  
-      '</script>';  */                                                                                                                             }
+      '</script>';                                                                                                                               }
       
 ?>
     
