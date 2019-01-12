@@ -62,11 +62,17 @@ h2{
 }
 h3
 {
-color:solid black;
-
+color:gold;
+font-size:medium;
+font-style:italic;
+padding-bottom:0px;
 }
 h4{
     color: gold;
+    font-size:medium;
+    font-style:italic;
+    padding-top:10px;
+    
 }
 h5{
         color: gold;
@@ -98,6 +104,23 @@ button:hover{
 
     border: solid-black;
 }
+input[type="submit"] {
+    background-color: #f70505;                                                                                        
+    border: black;                                                                                                    
+    color: #040404;                                                                                                   
+    padding: 5px 10px;                                                                                                
+    text-align: center;                                                                                               
+    text-decoration: none;                                                                                            
+    display: inline-block;                                                                                            
+    font-size: 16px;                                                                                                  
+    font-style:italic;                                                                                                
+    transition-duration: 0.2s;
+}
+input[type="submit"]:hover{
 
+
+    background-color: gold;                                                                               
+    color: black;
+}
 
 
