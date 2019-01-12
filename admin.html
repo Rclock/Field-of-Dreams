@@ -1,0 +1,27 @@
+<?php
+	if(!isset($_SESSION["login"])){
+		header("Location: http://fieldofdreams.ml/Sign-In.html");
+		die();
+	} else {
+		echo "Logged in!";
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Page</title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+	<div id="header">
+		<h1> Admin Page </h1>
+		<div id="nav">
+			<a href="admin.html"><button type="button">Home</button></a>
+			<a href="sendsms.html"><button type="button">Send SMS</button></a>
+			<a href="dataForm.html"><button type="button">Data Form</button></a>
+			<a href="logout.php"><button type="button">Logout</button></a>
+		</div>
+	</div>
+</body>
+</html>
