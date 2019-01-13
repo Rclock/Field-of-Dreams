@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html>
 <head>
-
+<link rel="shortcut icon" href="myicon.ico" type="image/x-icon" />  
 <a href="index.html"><button type="button">Back to Home</button></a>
-
+  
 <br></br>
 <title>Admin Login</title>
 <link rel="stylesheet" href="style.css"/>
@@ -48,6 +49,7 @@ if ((!isset($user)) || (!isset($pass)))
 }
 else if (($user=="admin") && ($pass=="fod"))
       {
+      	$_SESSION['user_id'] = $user;
      echo '<script type="text/javascript">',                                                                              
      'doSubmitOne(event);',                                                                                                                  
      '</script>'; 

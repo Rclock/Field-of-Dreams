@@ -1,7 +1,7 @@
 <?php
-if(!isset($_SESSION["login"])){ // make sure user is logged in
-    header("Location: http://fieldofdreams.ml/Sign-In.html");
-}
+/*if(!isset($_SESSION["user_id"])){ // make sure user is logged in
+    header("Location: login.php");
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ if(mysqli_num_rows($result) > 0){
 }
 
 mysqli_close($conn);
-header("Location: http://fieldofdreams.ml/sendsms.html");
+header("Location: sendsms.html");
 ?>
 </body>
 </html>

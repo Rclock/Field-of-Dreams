@@ -62,10 +62,10 @@ h2{
 }
 h3
 {
-color:gold;
-font-size:medium;
-font-style:italic;
-padding-bottom:0px;
+    color:gold;
+    font-size:medium;
+    font-style:italic;
+    padding-bottom:0px;
 }
 h4{
     color: gold;
@@ -76,8 +76,15 @@ h4{
 }
 h5{
         color: gold;
-        font-size:small;
-
+        font:status-bar;
+        font-size: large;
+       
+}
+h6{
+    color:gold;
+    font-style:italic;
+    text-align:center;
+    font-size: x-large;
 }
 table{
         border: gold;

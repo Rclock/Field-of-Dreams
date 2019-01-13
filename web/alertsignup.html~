@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css"/>   
+  <title>Alert Signup</title>
+</head>
+<body>
+  <a href="index.html"><button type="button">Back to Home</button></a>
+  <br></br>
+  <h1>Sign up for SMS alerts</h1>
+  <br></br>
+<h6>Regular SMS Alert System:</h6><h2><ul><li>Sign up to receive text-message alerts to any device with a valid phone number. These alerts will be sent to you whenever a bad batch of opioid drugs are potentially in your area.</li><li>To sign up, simply text JOIN to 000-000-0000. Reply with DONE at any time to stop alerts. </li></ul></h2>
+<br></br><br></br>
+<h6>Geographic SMS Alert System:</h6><h2><ul><li>Sign up to receive a Google Maps image sent to your cell phone showing exactly where an incident relating to bad opioids was reported along with the address of the location.</li><li>To sign up, text JOIN to 000-000-0000. Reply with DONE at any time to stop alerts. </li></ul></h2>
+
+</body>
+</html>

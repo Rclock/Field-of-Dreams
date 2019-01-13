@@ -1,19 +1,24 @@
-<?php
-	if(!isset($_SESSION["login"])){
-		header("Location: http://fieldofdreams.ml/Sign-In.html");
-	}
+<?php/*
+	if(!isset($_SESSION["user_id"])){
+		header("Location: login.php");
+	}*/
 ?>
 
 
 <!DOCTYPE HTML>
-<html>  
-	<title>SendSMS</title>
-	<link rel="stylesheet" type="text/css" href="style-signin.css">
-<body id="body-color">
+<html>
+<link rel="shortcut icon" href="myicon.ico" type="image/x-icon" />    
+  <a href="admin.html"><button type="button">Back to Admin Options</button></a> 
+  <br></br>
+  <h1>Send all subscribers SMS Alerts</h1>
+  <title>Send SMS Alert</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <body id="body-color">
+    
 	<div id="SendSMS">
 		<form action="sendsms.php" method="post">
-			Message: <input type="text" name="yourMessage"><br>
-			<input id="smsbutton" type="submit">
+		<h4>Message:</h4> <input type="text" name="yourMessage" size=70><br>
+			<input type="submit" name="button" id="button">
 		</form>
 	</div>
 </body>
